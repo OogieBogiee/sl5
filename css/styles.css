@@ -74,9 +74,13 @@ h3,
     height: 100lvh;
     background-image: url('../img/mobile.webp');
     background-size: cover;
-    background-position: right bottom;
+    background-position: center;
     background-repeat: no-repeat;
     z-index: 1;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .construction__container {
@@ -162,14 +166,14 @@ h3,
 
 .countdown__number {
     width: var(--cd-item-w);
-    height: var(--cd-item-h);
-    font-size: var(--cd-font-size);
+    aspect-ratio: 170 / 132;
+    font-size: calc(var(--cd-item-w) * 0.45);
     background-color: var(--color-fog-white);
     color: var(--color-industrial-blue);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: var(--cd-radius);
+    border-radius: 0 calc(var(--cd-item-w) * 0.4117) 0 calc(var(--cd-item-w) * 0.4117);
     line-height: 1;
 }
 
@@ -292,7 +296,7 @@ h3,
         --cd-item-w: 150px;
         --cd-item-h: 120px;
         --cd-font-size: 4rem;
-        --cd-radius: 0 50px 50px 0;
+        --cd-radius: 0 50px 0 50px;
         --cd-label-sz: 1.3rem;
         --cd-gap: 30px;
         --footer-label-sz: 1.3rem;
