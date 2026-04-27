@@ -25,7 +25,7 @@
     --cd-item-w: clamp(85px, 22vw, 110px);
     --cd-item-h: clamp(70px, 18vw, 90px);
     --cd-font-size: clamp(2rem, 6vw, 2.8rem);
-    --cd-radius: 0 60px 0px 60px;
+    --cd-radius: 0 clamp(28px, 7vw, 36px) clamp(28px, 7vw, 36px) 0;
     --cd-label-sz: clamp(0.85rem, 2.5vw, 1rem);
     --cd-gap: clamp(10px, 3vw, 20px);
     --footer-label-sz: clamp(1rem, 3vw, 1.1rem);
@@ -69,8 +69,9 @@ h3,
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    height: 100lvh;
     background-image: url('../img/mobile.webp');
     background-size: cover;
     background-position: right bottom;
@@ -210,6 +211,7 @@ h3,
         --cd-item-w: clamp(110px, 20vw, 140px);
         --cd-item-h: clamp(90px, 16vw, 110px);
         --cd-font-size: clamp(2.8rem, 5vw, 3.5rem);
+        --cd-radius: 0 clamp(36px, 7vw, 46px) clamp(36px, 7vw, 46px) 0;
         --cd-label-sz: clamp(1rem, 2vw, 1.2rem);
         --cd-gap: clamp(15px, 4vw, 30px);
         --footer-label-sz: clamp(1.1rem, 2.5vw, 1.3rem);
@@ -239,6 +241,7 @@ h3,
         --cd-item-w: clamp(100px, 12vw, 130px);
         --cd-item-h: clamp(80px, 10vw, 100px);
         --cd-font-size: clamp(2.5rem, 4vw, 3.2rem);
+        --cd-radius: 0 clamp(33px, 4vw, 43px) clamp(33px, 4vw, 43px) 0;
         --cd-label-sz: clamp(0.9rem, 1.5vw, 1.1rem);
         --cd-gap: clamp(15px, 2vw, 25px);
         --footer-label-sz: clamp(1rem, 1.5vw, 1.15rem);
@@ -289,6 +292,7 @@ h3,
         --cd-item-w: 150px;
         --cd-item-h: 120px;
         --cd-font-size: 4rem;
+        --cd-radius: 0 50px 50px 0;
         --cd-label-sz: 1.3rem;
         --cd-gap: 30px;
         --footer-label-sz: 1.3rem;
@@ -322,6 +326,7 @@ h3,
         --cd-item-w: 80px;
         --cd-item-h: 60px;
         --cd-font-size: 1.8rem;
+        --cd-radius: 0 25px 25px 0;
         --cd-gap: 10px;
     }
 
